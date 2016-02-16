@@ -1,0 +1,54 @@
+/* ------------------------------
+  Pagination
+------------------------------ */
+.pagination {
+  @include clearfix;
+  @extend .bottom-center;
+  bottom: 40px;
+  li {
+
+    // Base Style
+    float: left;
+    + li {margin-left: 5px;}
+    a {
+      display: block;
+      padding: 6px 15px 5px;
+      background-color: $white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: $box-shadow;
+      color: $gray;
+      font-size: $font-size-small;
+      &:hover, &:focus {
+        color: $black-gray;
+        text-decoration: none;
+      }
+      &:active {box-shadow: inset $box-shadow;}
+
+      // Previous Button and Next Button
+      &[ng-switch-when=prev],
+      &[ng-switch-when=next] {
+        width: 36px;
+        height: 31px;
+        padding: 0;
+        background-color: $istuary-green;
+        color: $white;
+        font-size: 0;
+        &:hover     {background-color: $istuary-green-l-20;}
+        &:active    {background-color: $istuary-green;}
+        &[disabled] {background-color: $istuary-green-l-40;}
+        &:before {
+          display: block;
+          font-family: FontAwesome;
+          font-size: $font-size-x-large;
+          font-weight: bold;
+          text-align: center;
+          line-height: 31px;
+        }
+      }
+      &[ng-switch-when=prev]:before {content:'\f104';}
+      &[ng-switch-when=next]:before {content:'\f105';}
+    }
+    &.disabled {display: none;}
+  }
+}

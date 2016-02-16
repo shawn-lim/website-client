@@ -1,0 +1,137 @@
+/* ------------------------------
+  Helpers
+------------------------------ */
+
+/* ----- Text Style ----- */
+
+.text-small {
+	font-size: $font-size-small;
+}
+.text-medium {
+	font-size: $font-size-body;
+}
+.text-large {
+	font-size: $font-size-large
+}
+.text-left {
+	text-align: left !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-capitalize {
+	text-transform: capitalize;
+}
+.text-white {
+	color: $white !important;
+}
+.text-gray {
+	color: $gray !important;
+}
+.text-black {
+	color: $black-gray !important;
+}
+.text-error {
+	color: $status-error !important;
+}
+.text-warning {
+	color: $status-warning !important;
+}
+.text-success {
+	color: $status-success !important;
+}
+.text-green {
+	color: $istuary-green !important;
+}
+
+/* ----- Layout ---- */
+
+.all-center {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	@include transform(-50%, -50%);
+}
+.top-center {
+	position:absolute;
+	top: 10%;
+	left: 50%;
+	@include transform(-50%, 0);
+}
+.bottom-center {
+	position:absolute;
+	bottom: 10%;
+	left: 50%;
+	@include transform(-50%, 0);
+}
+.vertical-center {
+	position:absolute;
+	top: 50%;
+	@include transform(0, -50%);
+}
+.f-right {
+	float: right;
+}
+
+/* ----- Spaces ---- */
+
+.mt-sm {
+	margin-top: 10px;
+}
+
+.mt-md {
+	margin-top: 20px;
+}
+
+.mt-lg {
+	margin-top: 30px;
+}
+
+/* ----- Backgrounds ------ */
+
+.bg-green{
+	background-color: $istuary-green-l-80 !important;
+}
+
+.bg-warning {
+	background-color: lighten($status-warning, 30%) !important;
+}
+
+.bg-error {
+	background-color: lighten($red, 30%) !important;
+}
+
+.bg-success {
+	background-color: lighten($status-success, 30%) !important;
+}
+
+/* ----- Other ----- */
+
+// Add Comma
+.ng-comma {
+	& + .ng-comma:before {content: ', ';}
+}
+
+// Lock Scroll
+.lock-scroll {
+	overflow: hidden;
+}
+
+// Change to Default List Style
+.default-list-style {
+	margin: 10px 0;
+	padding-left: 1.5em;
+	list-style: disc;
+	li {margin: 10px 0;}
+}
+
+// Make links looks clickable
+[ui-sref]{
+	cursor: pointer;
+}
+[ng-click]{
+	cursor: pointer !important;
+}

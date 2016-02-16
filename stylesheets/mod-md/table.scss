@@ -1,0 +1,85 @@
+/* ------------------------------
+  Table
+------------------------------ */
+
+table{
+  width: 100%;
+  tbody{
+    border: solid 1px $light-gray;
+    tr{
+      &:hover{
+        background-color: $istuary-green-l-80;
+        cursor: pointer;
+      }
+      th{
+        background-color: $istuary-green-l-40;
+        color: $white;
+        text-align: left;
+      }
+      th, td{
+        padding: 10px;
+        border-right: solid 1px $light-gray;
+        border-bottom: solid 1px $light-gray;
+        font-weight: normal;
+      }
+      td.table-with-buttons {
+        position: relative;
+        padding-right: 90px;
+        .buttons {
+          position: absolute;
+          top: 8px;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ng-table {
+  th.sortable {
+    background-color: $istuary-green-l-40;
+    color: $white;
+    text-align: left;
+    &:hover {
+      cursor: pointer;
+    }
+    &.sort-desc,
+    &.sort-asc {
+      background-color: $istuary-green-l-40 !important;
+      text-shadow: none !important;
+      .sort-indicator:before,
+      .sort-indicator:after {
+        margin-top: 10px !important;
+      }
+    }
+    .sort-indicator:before,
+    .sort-indicator:after {
+      position: static !important;
+      float: right;
+      opacity: 1 !important;
+      border-color: $white transparent !important;
+    }
+    .sort-indicator:before {
+      margin-top: 15px !important;
+      border-top-color: $white;
+    }
+    .sort-indicator:after {
+      margin-top: 5px !important;
+      margin-right: -8px;
+      border-bottom-color: $white;
+    }
+  }
+  th.sortable, td {
+    padding: 10px;
+    border-right: solid 1px $light-gray;
+    border-bottom: solid 1px $light-gray;
+    font-weight: normal;
+  }
+}
+
+.ng-table-counts {
+  margin-top: 20px;
+  button {
+    @extend button.small;
+  }
+}

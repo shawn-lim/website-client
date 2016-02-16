@@ -1,0 +1,82 @@
+/* ------------------------------
+  Buttons
+------------------------------ */
+
+button {
+
+  // Default Button
+  padding: 7px 20px 6px;
+  background-color: $white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  color: $gray;
+  font-size: $font-size-body;
+  outline: none;
+  &:hover {
+    color: $black-gray;
+  }
+  &:active {
+    box-shadow: inset $box-shadow;
+  }
+  &[disabled] {
+    box-shadow: $box-shadow;
+    color: $text-disable;
+  }
+  + button {
+    margin-left: 10px;
+  }
+
+  // Primary Button
+  &.primary {
+    background-color: $istuary-green;
+    color: $white;
+    &:hover     {background-color: $istuary-green-l-20;}
+    &:active    {background-color: $istuary-green;}
+    &[disabled] {background-color: $istuary-green-l-40;}
+  }
+
+  // Cancel Button
+  &.cancel {
+    background-color: $light-gray;
+    color: $gray;
+    &:hover{
+      background-color: lighten($light-gray, 3%);
+      color: $black-gray;
+    }
+    &[disabled]{
+      background-color: lighten($light-gray, 3%);
+      color: $text-disable;
+    }
+  }
+
+  // Danger Button
+  &.danger {
+    background-color: $red;
+    color: $white;
+    &:hover     {background-color: $red-l-20;}
+    &:active    {background-color: $red;}
+    &[disabled] {background-color: $red-l-40;}
+  }
+
+  // Button Size
+  &.small {
+    padding: 6px 15px 5px;
+    font-size: $font-size-small;
+  }
+  &.large {
+    padding: 8px 25px 7px;
+    font-size: $font-size-large;
+  }
+  &.icon-only {
+    width: 30px;
+    height: 26px;
+    padding: 0 8px;
+  }
+
+}
+
+// Overwrite Library
+.ng-table-counts button {
+  padding: 6px 10px 5px !important;
+}

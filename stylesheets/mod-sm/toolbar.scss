@@ -1,0 +1,21 @@
+/* ------------------------------
+  Toolbar
+------------------------------ */
+
+.toolbar,
+.row.toolbar {
+  margin-bottom: 40px !important;
+  .input-with-icon {
+    display: inline-block;
+    width: 200px;
+  }
+}
+
+.toolbar-link-back {
+  i {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+    font-size: 20px;
+  }
+}

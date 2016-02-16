@@ -1,0 +1,55 @@
+/* ------------------------------
+  Mixins
+------------------------------ */
+
+@mixin button-style($background,$border,$color){
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+}
+
+@mixin button-hover-style($background,$color){
+  &:hover, &:focus {
+    background-color: $background;
+    color: $color;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin ellipsify {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin background-cover($x, $y) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $x $y;
+}
+
+@mixin card-hover-style {
+  &:hover, &:focus {
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+@mixin transform($x,$y){
+  -webkit-transform:  translate($x, $y);
+  -ms-transform:      translate($x, $y);
+  transform:          translate($x, $y);
+}

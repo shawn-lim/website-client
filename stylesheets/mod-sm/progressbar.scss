@@ -1,0 +1,20 @@
+/* ------------------------------
+  Progressbar
+------------------------------ */
+
+[progress-bar]{
+  span.small{display:none;}
+  .progress{
+    height: 15px;
+    border: solid 1px $light-gray;
+    border-radius: 5px;
+    box-shadow: $inset-box-shadow;
+    .progress-bar{
+      height:100%;
+      background-color: $status-success;
+      border-radius: 5px;
+      box-shadow: $inset-box-shadow;
+      font-size:0;
+    }
+  }
+}

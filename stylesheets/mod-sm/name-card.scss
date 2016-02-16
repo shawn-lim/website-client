@@ -1,0 +1,84 @@
+/* ------------------------------
+  Name Card
+------------------------------ */
+
+.name-cards {
+  margin-top: -20px;
+}
+
+.name-card {
+  position: relative;
+  margin-top: 20px;
+  a {
+    display: block;
+    height: 60px;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    &:hover {background-color: $istuary-green-l-80;}
+  }
+  span {
+    @extend .vertical-center;
+    width: 100px;
+    margin-left: 35px;
+    color: $text-body;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+  i {
+    @extend .vertical-center;
+    right: 10px;
+    font-size: 20px;
+    color: $red;
+  }
+  .quarter {
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    padding: 5px 5px 3px;
+    background-color: $istuary-green-l-20;
+    box-shadow: $box-shadow;
+    color: $white;
+  }
+  &.with-status {
+    a {
+      height: 100px;
+      padding: 0;
+      &:hover {
+        .name-card-status {border-color: $white;}
+      }
+    }
+    span {
+      display: block;
+    }
+    .name-card-name {
+      position: relative;
+      height: 70px;
+      padding: 10px;
+      span {
+        overflow: hidden;
+        width: 100px;
+        max-height: 45px;
+        margin-left: 45px;
+      }
+    }
+    .name-card-status {
+      position: relative;
+      height: 30px;
+      span {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 20px;
+        &.text-success  {@extend .bg-success;}
+        &.text-warning  {@extend .bg-warning;}
+        &.text-error    {@extend .bg-error;}
+      }
+    }
+  }
+}

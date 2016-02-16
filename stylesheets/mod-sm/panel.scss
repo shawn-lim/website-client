@@ -1,0 +1,38 @@
+/* ------------------------------
+  Panel
+------------------------------ */
+
+.panel {
+	padding: 20px;
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: $box-shadow;
+	p:last-child {margin-bottom: 0;}
+
+	&.panel-lg {padding: 40px;}
+	&.panel-square {border-radius: 0;}
+	&.panel-no-shadow {border: 1px solid $border-pale; box-shadow: none;}
+	&.bg-green {
+		.controls {border-color: $white;}
+	}
+
+	+ .panel {margin-top: 30px;}
+
+	.row:not(:last-child) {margin-bottom: 20px;}
+
+	.controls {
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 2px solid $border-pale;
+		@include clearfix;
+	}
+
+	.controls-link {
+		i {
+			position: relative;
+			top: 1px;
+			margin-right: 5px;
+			font-size: 20px;
+		}
+	}
+}

@@ -1,0 +1,109 @@
+/* ------------------------------
+  Base
+------------------------------ */
+
+body {
+  position: relative;
+  background-color: $background-body;
+  color: $text-body;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+}
+
+main {
+  padding: 80px 0 50px;
+  background-color: $background-main;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: $font-weight-heading;
+  line-height: $line-height-heading;
+}
+
+h1 {
+  color: $text-heading-primary;
+  font-size: $font-size-h1;
+}
+
+h2 {
+  color: $text-heading-secondary;
+  font-size: $font-size-h2;
+}
+
+h3 {
+  color: $text-heading-primary;
+  font-size: $font-size-h3;
+}
+
+h4 {
+  color: $text-heading-secondary;
+  font-size: $font-size-h4;
+}
+
+ol {
+  padding-left: 1em;
+  li {margin: 10px 0;}
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: $text-body;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+	&[disabled]{
+		pointer-events: none;
+		color: $color-link-disabled;
+	}
+}
+
+small {
+  color: $text-subtle;
+  font-size: $font-size-small;
+}
+
+hr {
+  border: solid #eee;
+  border-width: 2px 0 0;
+}
+
+select {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+[ng-bind-html] {
+  h1, h2 {margin: 10px 0;}
+  h1 {font-size: $font-size-x-large;}
+  h2 {font-size: $font-size-large;}
+  ul{@extend .default-list-style;}
+}

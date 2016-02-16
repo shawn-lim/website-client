@@ -1,0 +1,23 @@
+/* ------------------------------
+  Font
+------------------------------ */
+
+// Roboto
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular-webfont.eot');
+  src: url('/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Roboto-Regular-webfont.woff') format('woff'),
+  url('/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+  url('/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Rajdhani
+@font-face {
+  font-family: 'Rajdhani';
+  src: url(/fonts/Rajdhani-Regular.otf) format('otf'),
+  url(/fonts/Rajdhani-Regular.ttf) format('ttf'),
+  url(/fonts/Rajdhani-Regular.woff) format('woff');
+}

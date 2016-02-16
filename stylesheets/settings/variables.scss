@@ -1,0 +1,119 @@
+/* ------------------------------
+  Variables
+------------------------------ */
+
+//  Screen Width
+
+$container-width: 960px;
+
+//  Typography
+
+$font-size-body    : 14px;
+$font-size-h1      : 30px;
+$font-size-h2      : 25px;
+$font-size-h3      : 20px;
+$font-size-h4      : 20px;
+$font-size-small   : 12px;
+$font-size-large   : 16px;
+$font-size-x-large : 18px;
+
+$font-weight-heading: normal;
+
+$line-height-body: 1.6;
+$line-height-heading: 1.3;
+
+//  Color
+
+$istuary-green-l-80 : #E3F3F3;
+$istuary-green-l-60 : #ADDCDD;
+$istuary-green-l-40 : #84CBCC;
+$istuary-green-l-20 : #5BBABB;
+$istuary-green      : #32A9AB;
+$istuary-green-d-20 : #288788;
+$istuary-green-d-40 : #1E6566;
+$istuary-green-d-60 : #144344;
+
+$navy-l-60 : #ABACB5;
+$navy-l-40 : #818290;
+$navy-l-20 : #57596B;
+$navy      : #2D3047;
+$navy-d-20 : #242638;
+$navy-d-40 : #1B1C2A;
+$navy-d-60 : #12131C;
+
+
+$white-blue-l-80 : #FDFEFE;
+$white-blue-l-60 : #F3F9FE;
+$white-blue-l-40 : #EDF7FE;
+$white-blue-l-20 : #E7F4FE;
+$white-blue      : #E1F2FE;
+$white-blue-d-20 : #B4C1CB;
+$white-blue-d-40 : #879198;
+$white-blue-d-60 : #5A6065;
+
+$red-l-60        : #F8BEBF;
+$red-l-40        : #F59D9F;
+$red-l-20        : #F27D7F;
+$red             : #EF5D60;
+$red-d-20        : #BF4A4C;
+$red-d-40        : #8F3739;
+$red-d-60        : #5F2526;
+
+  // Grays and Whites
+$black-gray     : #575757;
+$gray           : #808080;
+$lighter-gray   : #DDDDDD;
+$light-gray     : #EEEEEE;
+$white          : #FFFFFF;
+
+// Presets
+
+$background-body    : $white-blue;
+$background-header  : $navy;
+$background-main    : $white-blue-l-60;
+$background-footer  : $white-blue;
+$background-disable : $lighter-gray;
+
+$border-dark        : $navy-l-60;
+$border-pale        : $light-gray;
+$border-disable     : $lighter-gray;
+
+$box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+$inset-box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.15);
+
+// Statuses
+
+$status-error   : $red;
+$status-warning : #FFAB40;
+$status-success : #ACDB7D;
+
+// Texts
+
+$text-body              : $black-gray;
+$text-heading-primary   : $istuary-green;
+$text-heading-secondary : $navy;
+$text-white             : $white-blue;
+$text-subtle            : $navy-l-40;
+$text-disable           : $lighter-gray;
+
+// links
+$color-link       		: $red-l-20;
+$color-link-hover 		: $red-l-60;
+$color-link-disabled 	: $red-l-60;
+
+//  Grid
+
+$col-gutter: 3%;
+
+$col-widths : 5.333%,
+              13.667%,
+              22%,
+              30.333%,
+              39.5%,
+              47%,
+              54.5%,
+              63.667%,
+              72%,
+              80.3%,
+              88.667%,
+              97%;
