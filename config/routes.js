@@ -2,7 +2,7 @@
 /**
  * $urlRouterProvider must be defined before the routes for the redirections to work properly.
  */
-angular.module('irsClient').config(function ($urlRouterProvider, $urlMatcherFactoryProvider, $locationProvider) {
+angular.module('angularClient').config(function ($urlRouterProvider, $urlMatcherFactoryProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
 	//    Allow trailing slashes
@@ -12,7 +12,7 @@ angular.module('irsClient').config(function ($urlRouterProvider, $urlMatcherFact
 	$locationProvider.html5Mode(true);
 });
 
-angular.module('irsClient').config(function($stateProvider) {
+angular.module('angularClient').config(function($stateProvider) {
   /* Add New States Above */
 });
 
