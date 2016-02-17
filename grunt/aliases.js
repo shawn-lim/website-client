@@ -14,7 +14,8 @@ module.exports = {
 		'uglify',
 		'copy',
     'htmlmin',
-    'clean:after'
+    'clean:after',
+		'wiredep:task'
   ],
   'serve': [
 		'wiredep:task',
