@@ -52,7 +52,28 @@ grunt build
 ```
 	Grunt build will concatenate everything from your bower js files to your angular required files into one single JS file. This also includes CSS files. Only font files are separated. The dist folder is self-contained with a server and can the whole dist folder will basically serve your client.
 
+Developing With the Kit
+-----------------------
 
+You can use yeoman generator to generate useful blocks of data for your angular project.
+```
+yo gb-angular:<type> <name>
+```
+For example:
+```
+yo gb-angular:directive my-directive
+```
+```
+yo gb-angular:partial login
+```
+```
+yo gb-angular:service UserService
+```
+
+Follow the instructions in the console, and you will see files generated.
+
+Thanks!
+=======
 Thanks for using the kit!
 
 Author: Shawn Lim
