@@ -1,0 +1,41 @@
+/* ------------------------------
+  Toast
+
+  We are unsure how you created your toast, or what toast libraries you may be using. For your reference, this is how we defined our toast styles.
+
+.toast {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  @include transform(-50%, 0);
+  width: 90%;
+  max-width: 700px;
+  min-height: 60px;
+  padding: $spacing-medium;
+  background-color: $white;
+  border: $border-normal solid $gray-20;
+  box-shadow: $box-shadow;
+  text-align: center;
+  p {
+    margin: 0;
+    color: $gray-40;
+  }
+  &.success {
+    background-color: lighten($success, 45%);
+    border-color: $success;
+    p {color: $success;}
+  }
+  &.warning {
+    background-color: lighten($warning, 45%);
+    border-color: $warning;
+    p {color: $warning;}
+  }
+  &.error {
+    background-color: lighten($error, 45%);
+    border-color: $error;
+    p {color: $error;}
+  }
+}
+
+------------------------------ */

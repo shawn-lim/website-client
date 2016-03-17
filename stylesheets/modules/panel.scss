@@ -1,0 +1,17 @@
+/* ------------------------------
+  Panel
+------------------------------ */
+
+.panel, .panel-lg {
+	background-color: $white;
+}
+
+.panel {
+	padding: $spacing-medium;
+	+ .panel {margin-top: $spacing-medium;}
+}
+
+.panel-lg {
+	padding: $spacing-x-large;
+	+ .panel-lg {margin-top: $spacing-x-large;}
+}

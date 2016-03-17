@@ -1,0 +1,32 @@
+/* ------------------------------
+  Pagination
+------------------------------ */
+
+.pagination {
+  @include clearfix;
+
+  li {
+    float: left;
+    + li {margin-left: $spacing-small;}
+    > a  {padding: $spacing-small;}
+
+    &.active a, &[disabled] a {
+      cursor: default;
+      text-decoration: none  !important;
+    }
+    &.active {a {color: $color-text-body;}}
+    &[disabled] {opacity: 0.4;}
+
+    &.ellipsis {
+      margin-left: $spacing-small + $spacing-x-small;
+      + li {margin-left: $spacing-small + $spacing-x-small;}
+
+      i {color: $gray-30;}
+    }
+  }
+
+  .with-icon-left,
+  .with-icon-right {
+    i {font-weight: $font-weight-bold;}
+  }
+}

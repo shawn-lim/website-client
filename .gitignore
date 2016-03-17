@@ -1,0 +1,8 @@
+### Yeoman template
+node_modules/
+bower_components/
+*.log
+
+build/
+
+# Created by .ignore support plugin (hsz.mobi)

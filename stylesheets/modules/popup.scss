@@ -1,0 +1,61 @@
+/* ------------------------------
+  Popup
+
+  We are unsure how you created your popup, or what popup libraries you may be using. For your reference, this is how we defined our popup styles.
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	.popup-mask {
+		cursor: default !important;
+		position: absolute;
+		top:0;
+		left:0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba($gray-40, 0.7);
+	}
+	.panel{
+    @extend .center-all;
+		width: 90%;
+		overflow-y: scroll;
+    max-width: 700px;
+    max-height: 400px;
+		padding: $spacing-small;
+    text-align: center;
+    box-shadow: $box-shadow;
+		@include tablet-and-up {
+			padding: $spacing-x-large;
+		};
+	}
+  .panel-inner {
+    position: relative;
+    button, .button {
+      margin-top: $spacing-large;
+    }
+    .link-cancel {
+      margin-top: $spacing-medium;
+    }
+  }
+}
+
+.popup-cancel {
+  position: absolute;
+  top: $spacing-medium * -2;
+  right: $spacing-medium * -2;
+  a {
+    display: inline-block;
+    padding: $spacing-x-small;
+    color: $gray-40;
+    font-size: $font-size-large;
+    line-height: 1;
+  }
+}
+
+------------------------------ */

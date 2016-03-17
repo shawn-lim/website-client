@@ -1,0 +1,1454 @@
+/**
+ * Istuarian CSS Framework
+ * @author: Elle Kasai
+ * @version: 1.0.0, 2016-02-16
+ */
+/* ------------------------------
+  Font
+------------------------------ */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular-webfont.eot');
+  src: url('/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/Roboto-Regular-webfont.woff') format('woff'), url('/fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url(/fonts/Rajdhani-Regular.otf) format('otf'), url(/fonts/Rajdhani-Regular.ttf) format('ttf'), url(/fonts/Rajdhani-Regular.woff) format('woff'); }
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: "Roboto", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+b, strong {
+  font-weight: bold; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button, input, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+/* ------------------------------
+  Variables
+------------------------------ */
+/* ------------------------------
+  Cloak
+------------------------------ */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+/* ------------------------------
+  Mixins
+------------------------------ */
+/* ------------------------------
+  Base
+------------------------------ */
+body {
+  position: relative;
+  background-color: #E1F2FE;
+  color: #575757;
+  font-size: 14px;
+  line-height: 1.6; }
+
+main {
+  padding: 80px 0 50px;
+  background-color: #F3F9FE; }
+
+*, *:before, *:after {
+  box-sizing: border-box !important; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.3; }
+
+h1 {
+  color: #32A9AB;
+  font-size: 30px; }
+
+h2 {
+  color: #2D3047;
+  font-size: 25px; }
+
+h3 {
+  color: #32A9AB;
+  font-size: 20px; }
+
+h4 {
+  color: #2D3047;
+  font-size: 20px; }
+
+ol {
+  padding-left: 1em; }
+  ol li {
+    margin: 10px 0; }
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+p {
+  color: #575757;
+  line-height: 22px;
+  word-wrap: break-word; }
+
+a {
+  color: #F27D7F;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #F8BEBF;
+    text-decoration: underline; }
+  a[disabled] {
+    pointer-events: none;
+    color: #F8BEBF; }
+
+small {
+  color: #818290;
+  font-size: 12px; }
+
+hr {
+  border: solid #eee;
+  border-width: 2px 0 0; }
+
+select {
+  cursor: pointer; }
+
+textarea {
+  resize: none; }
+
+[ng-bind-html] h1, [ng-bind-html] h2 {
+  margin: 10px 0; }
+[ng-bind-html] h1 {
+  font-size: 18px; }
+[ng-bind-html] h2 {
+  font-size: 16px; }
+
+.FadeInSlow.ng-enter, .FadeInSlow.ng-hide-remove, .FadeInSlow.ng-enter-active {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeInSlow.ng-enter-stagger, .FadeInSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInSlow.ng-enter, .FadeInSlow.ng-leave, .FadeInSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeInFast.ng-enter, .FadeInFast.ng-hide-remove, .FadeInFast.ng-enter-active {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeInFast.ng-enter-stagger, .FadeInFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInFast.ng-enter, .FadeInFast.ng-leave, .FadeInFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeInUpSlow.ng-enter, .FadeInUpSlow.ng-hide-remove, .FadeInUpSlow.ng-enter-active {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeInUpSlow.ng-enter-stagger, .FadeInUpSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInUpSlow.ng-enter, .FadeInUpSlow.ng-leave, .FadeInUpSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeInUpFast.ng-enter, .FadeInUpFast.ng-hide-remove, .FadeInUpFast.ng-enter-active {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeInUpFast.ng-enter-stagger, .FadeInUpFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInUpFast.ng-enter, .FadeInUpFast.ng-leave, .FadeInUpFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeInDownSlow.ng-enter, .FadeInDownSlow.ng-hide-remove, .FadeInDownSlow.ng-enter-active {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeInDownSlow.ng-enter-stagger, .FadeInDownSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInDownSlow.ng-enter, .FadeInDownSlow.ng-leave, .FadeInDownSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeInDownFast.ng-enter, .FadeInDownFast.ng-hide-remove, .FadeInDownFast.ng-enter-active {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeInDownFast.ng-enter-stagger, .FadeInDownFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeInDownFast.ng-enter, .FadeInDownFast.ng-leave, .FadeInDownFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutSlow.ng-leave, .FadeOutSlow.ng-hide-add {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeOutSlow.ng-enter-stagger, .FadeOutSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutSlow.ng-enter, .FadeOutSlow.ng-leave, .FadeOutSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutFast.ng-leave, .FadeOutFast.ng-hide-add {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeOutFast.ng-enter-stagger, .FadeOutFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutFast.ng-enter, .FadeOutFast.ng-leave, .FadeOutFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutUpSlow.ng-leave, .FadeOutUpSlow.ng-hide-add {
+  -webkit-animation-name: fadeOutUp;
+  -moz-animation-name: fadeOutUp;
+  -ms-animation-name: fadeOutUp;
+  -o-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeOutUpSlow.ng-enter-stagger, .FadeOutUpSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutUpSlow.ng-enter, .FadeOutUpSlow.ng-leave, .FadeOutUpSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutUpFast.ng-leave, .FadeOutUpFast.ng-hide-add {
+  -webkit-animation-name: fadeOutUp;
+  -moz-animation-name: fadeOutUp;
+  -ms-animation-name: fadeOutUp;
+  -o-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeOutUpFast.ng-enter-stagger, .FadeOutUpFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutUpFast.ng-enter, .FadeOutUpFast.ng-leave, .FadeOutUpFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutDownSlow.ng-leave, .FadeOutDownSlow.ng-hide-add {
+  -webkit-animation-name: fadeOutDown;
+  -moz-animation-name: fadeOutDown;
+  -ms-animation-name: fadeOutDown;
+  -o-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+.FadeOutDownSlow.ng-enter-stagger, .FadeOutDownSlow.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutDownSlow.ng-enter, .FadeOutDownSlow.ng-leave, .FadeOutDownSlow.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.FadeOutDownFast.ng-leave, .FadeOutDownFast.ng-hide-add {
+  -webkit-animation-name: fadeOutDown;
+  -moz-animation-name: fadeOutDown;
+  -ms-animation-name: fadeOutDown;
+  -o-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration: 0.3s;
+  -moz-animation-duration: 0.3s;
+  -ms-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+  animation-duration: 0.3s; }
+.FadeOutDownFast.ng-enter-stagger, .FadeOutDownFast.ng-leave-stagger {
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+.FadeOutDownFast.ng-enter, .FadeOutDownFast.ng-leave, .FadeOutDownFast.ng-move {
+  -webkit-transition: 0.75s linear all;
+  -moz-transition: 0.75s linear all;
+  -ms-transition: 0.75s linear all;
+  -o-transition: 0.75s linear all;
+  transition: 0.75s linear all; }
+
+.SlidingDropdown {
+  -webkit-transition: 1s linear max-height;
+  -moz-transition: 1s linear max-height;
+  -ms-transition: 1s linear max-height;
+  -o-transition: 1s linear max-height;
+  transition: 1s linear max-height;
+  overflow-y: auto;
+  max-height: none; }
+  .SlidingDropdown.ng-hide {
+    display: block !important;
+    overflow: hidden;
+    max-height: 0; }
+  .SlidingDropdown.ng-hide-remove {
+    max-height: 600px; }
+
+[ui-view].ng-enter {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0; }
+[ui-view].ng-enter-active {
+  opacity: 1; }
+
+/* ------------------------------
+  Container
+------------------------------ */
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/* ------------------------------
+  Variables
+------------------------------ */
+/* ------------------------------
+  Grid
+------------------------------ */
+.row {
+  margin-left: -3%; }
+  .row:before, .row:after {
+    content: "";
+    display: block;
+    overflow: hidden; }
+  .row:after {
+    clear: both; }
+
+.col {
+  float: left;
+  margin-left: 3%; }
+  .col[class*=" offset-"] {
+    min-height: 1px; }
+
+.col-1 {
+  width: 5.333%; }
+
+.col-2 {
+  width: 13.667%; }
+
+.col-3 {
+  width: 22%; }
+
+.col-4 {
+  width: 30.333%; }
+
+.col-5 {
+  width: 39.5%; }
+
+.col-6 {
+  width: 47%; }
+
+.col-7 {
+  width: 54.5%; }
+
+.col-8 {
+  width: 63.667%; }
+
+.col-9 {
+  width: 72%; }
+
+.col-10 {
+  width: 80.3%; }
+
+.col-11 {
+  width: 88.667%; }
+
+.col-12 {
+  width: 97%; }
+
+.offset-1 {
+  margin-left: 8.333%; }
+
+.offset-2 {
+  margin-left: 16.667%; }
+
+.offset-3 {
+  margin-left: 25%; }
+
+.offset-4 {
+  margin-left: 33.333%; }
+
+.offset-5 {
+  margin-left: 42.5%; }
+
+.offset-6 {
+  margin-left: 50%; }
+
+.offset-7 {
+  margin-left: 57.5%; }
+
+.offset-8 {
+  margin-left: 66.667%; }
+
+.offset-9 {
+  margin-left: 75%; }
+
+.offset-10 {
+  margin-left: 83.3%; }
+
+.offset-11 {
+  margin-left: 91.667%; }
+
+.offset-12 {
+  margin-left: 100%; }
+
+/* ------------------------------
+  Section
+------------------------------ */
+section {
+  position: relative; }
+
+section + section {
+  margin-top: 30px; }
+
+/* ------------------------------
+  Buttons
+------------------------------ */
+button {
+  padding: 7px 20px 6px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  color: #808080;
+  font-size: 14px;
+  outline: none; }
+  button:hover {
+    color: #575757; }
+  button:active {
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+  button[disabled] {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    color: #DDDDDD; }
+  button + button {
+    margin-left: 10px; }
+  button.primary, text-angular .btn-group button.active {
+    background-color: #32A9AB;
+    color: #FFFFFF; }
+    button.primary:hover, text-angular .btn-group button.active:hover {
+      background-color: #5BBABB; }
+    button.primary:active, text-angular .btn-group button.active:active {
+      background-color: #32A9AB; }
+    button.primary[disabled], text-angular .btn-group button[disabled].active {
+      background-color: #84CBCC; }
+  button.cancel {
+    background-color: #EEEEEE;
+    color: #808080; }
+    button.cancel:hover {
+      background-color: #f6f6f6;
+      color: #575757; }
+    button.cancel[disabled] {
+      background-color: #f6f6f6;
+      color: #DDDDDD; }
+  button.danger {
+    background-color: #EF5D60;
+    color: #FFFFFF; }
+    button.danger:hover {
+      background-color: #F27D7F; }
+    button.danger:active {
+      background-color: #EF5D60; }
+    button.danger[disabled] {
+      background-color: #F59D9F; }
+  button.small, .ng-table-counts button {
+    padding: 6px 15px 5px;
+    font-size: 12px; }
+  button.large {
+    padding: 8px 25px 7px;
+    font-size: 16px; }
+  button.icon-only {
+    width: 30px;
+    height: 26px;
+    padding: 0 8px; }
+
+.ng-table-counts button {
+  padding: 6px 10px 5px !important; }
+
+/* ------------------------------
+  Form
+------------------------------ */
+label {
+  color: #818290;
+  font-size: 16px;
+  line-height: 35px; }
+  label.label-radio {
+    font-size: 14px; }
+
+textarea {
+  width: 100%;
+  padding: 7px;
+  background-color: #FFFFFF;
+  border: solid 1px #ABACB5;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  min-height: 150px; }
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 7px;
+  background-color: #FFFFFF;
+  border: solid 1px #ABACB5;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  outline: none; }
+
+select {
+  width: 100%;
+  height: 35px;
+  padding: 8px 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border: none; }
+
+[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0); }
+  [type="radio"] + span:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75em;
+    border-radius: 1em;
+    border: solid 2px #32A9AB;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    transition: 0.5s ease all;
+    vertical-align: middle; }
+  [type="radio"]:checked + span:before {
+    box-shadow: none;
+    background-color: #32A9AB; }
+
+.input-with-icon {
+  position: relative; }
+  .input-with-icon input {
+    padding-left: 35px; }
+  .input-with-icon + .input-with-icon {
+    margin-top: 20px; }
+  .input-with-icon:before {
+    position: absolute;
+    color: #DDDDDD;
+    font-family: FontAwesome; }
+  .input-with-icon.input-email:before {
+    top: 5px;
+    left: 10px;
+    content: "\f003";
+    font-size: 16px; }
+  .input-with-icon.input-password:before {
+    top: 2px;
+    left: 12px;
+    content: "\f023";
+    font-size: 20px; }
+  .input-with-icon.input-search:before {
+    top: 5px;
+    left: 12px;
+    content: "\f002";
+    font-size: 16px; }
+  .input-with-icon + button {
+    margin-left: 10px; }
+  .input-with-icon.active:before {
+    color: #808080; }
+
+text-angular.focussed, text-angular.ng-dirty {
+  margin-top: 0; }
+  text-angular.focussed [text-angular-toolbar], text-angular.ng-dirty [text-angular-toolbar] {
+    margin-top: 10px;
+    height: 25px;
+    opacity: 1; }
+text-angular [text-angular-toolbar] {
+  margin-top: -5px;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all; }
+text-angular .ta-scroll-window > .ta-bind {
+  min-height: 150px;
+  border: solid 1px #ABACB5;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
+text-angular .ta-scroll-window.form-control {
+  min-height: 150px;
+  max-height: 350px;
+  margin-top: 10px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all; }
+text-angular .btn-group {
+  margin-bottom: 10px; }
+  text-angular .btn-group button {
+    padding: 3px 7px;
+    margin: 0 3px;
+    font-size: 11px; }
+text-angular h1, text-angular h2 {
+  margin: 10px 0; }
+text-angular h1 {
+  font-size: 18px; }
+text-angular h2 {
+  font-size: 16px; }
+
+/* ------------------------------
+  Helpers
+------------------------------ */
+/* ----- Text Style ----- */
+.text-small {
+  font-size: 12px; }
+
+.text-medium {
+  font-size: 14px; }
+
+.text-large {
+  font-size: 16px; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.text-white {
+  color: #FFFFFF !important; }
+
+.text-gray {
+  color: #808080 !important; }
+
+.text-black {
+  color: #575757 !important; }
+
+.text-error {
+  color: #EF5D60 !important; }
+
+.text-warning {
+  color: #FFAB40 !important; }
+
+.text-success {
+  color: #ACDB7D !important; }
+
+.text-green {
+  color: #32A9AB !important; }
+
+/* ----- Layout ---- */
+.all-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.top-center {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
+
+.bottom-center, .pagination {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
+
+.vertical-center, .name-card span, .name-card i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
+
+.f-right {
+  float: right; }
+
+/* ----- Spaces ---- */
+.mt-sm {
+  margin-top: 10px; }
+
+.mt-md {
+  margin-top: 20px; }
+
+.mt-lg {
+  margin-top: 30px; }
+
+/* ----- Backgrounds ------ */
+.bg-green {
+  background-color: #E3F3F3 !important; }
+
+.bg-warning, .name-card.with-status .name-card-status span.text-warning {
+  background-color: #ffeed9 !important; }
+
+.bg-error, .name-card.with-status .name-card-status span.text-error {
+  background-color: #fde8e9 !important; }
+
+.bg-success, .name-card.with-status .name-card-status span.text-success {
+  background-color: #f8fcf5 !important; }
+
+/* ----- Other ----- */
+.ng-comma + .ng-comma:before {
+  content: ', '; }
+
+.lock-scroll {
+  overflow: hidden; }
+
+.default-list-style, [ng-bind-html] ul, text-angular ul {
+  margin: 10px 0;
+  padding-left: 1.5em;
+  list-style: disc; }
+  .default-list-style li, [ng-bind-html] ul li, text-angular ul li {
+    margin: 10px 0; }
+
+[ui-sref] {
+  cursor: pointer; }
+
+[ng-click] {
+  cursor: pointer !important; }
+
+/* ------------------------------
+  Name Card
+------------------------------ */
+.name-cards {
+  margin-top: -20px; }
+
+.name-card {
+  position: relative;
+  margin-top: 20px; }
+  .name-card a {
+    display: block;
+    height: 60px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+    .name-card a:hover {
+      background-color: #E3F3F3; }
+  .name-card span {
+    width: 100px;
+    margin-left: 35px;
+    color: #575757;
+    font-weight: bold;
+    word-wrap: break-word; }
+  .name-card i {
+    right: 10px;
+    font-size: 20px;
+    color: #EF5D60; }
+  .name-card .quarter {
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    padding: 5px 5px 3px;
+    background-color: #5BBABB;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    color: #FFFFFF; }
+  .name-card.with-status a {
+    height: 100px;
+    padding: 0; }
+    .name-card.with-status a:hover .name-card-status {
+      border-color: #FFFFFF; }
+  .name-card.with-status span {
+    display: block; }
+  .name-card.with-status .name-card-name {
+    position: relative;
+    height: 70px;
+    padding: 10px; }
+    .name-card.with-status .name-card-name span {
+      overflow: hidden;
+      width: 100px;
+      max-height: 45px;
+      margin-left: 45px; }
+  .name-card.with-status .name-card-status {
+    position: relative;
+    height: 30px; }
+    .name-card.with-status .name-card-status span {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      padding: 5px;
+      border-radius: 0 0 5px 5px;
+      font-weight: normal;
+      text-align: center;
+      line-height: 20px; }
+
+/* ------------------------------
+  Pagination
+------------------------------ */
+.pagination {
+  bottom: 40px; }
+  .pagination:before, .pagination:after {
+    content: "";
+    display: block;
+    overflow: hidden; }
+  .pagination:after {
+    clear: both; }
+  .pagination li {
+    float: left; }
+    .pagination li + li {
+      margin-left: 5px; }
+    .pagination li a {
+      display: block;
+      padding: 6px 15px 5px;
+      background-color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+      color: #808080;
+      font-size: 12px; }
+      .pagination li a:hover, .pagination li a:focus {
+        color: #575757;
+        text-decoration: none; }
+      .pagination li a:active {
+        box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+      .pagination li a[ng-switch-when=prev], .pagination li a[ng-switch-when=next] {
+        width: 36px;
+        height: 31px;
+        padding: 0;
+        background-color: #32A9AB;
+        color: #FFFFFF;
+        font-size: 0; }
+        .pagination li a[ng-switch-when=prev]:hover, .pagination li a[ng-switch-when=next]:hover {
+          background-color: #5BBABB; }
+        .pagination li a[ng-switch-when=prev]:active, .pagination li a[ng-switch-when=next]:active {
+          background-color: #32A9AB; }
+        .pagination li a[ng-switch-when=prev][disabled], .pagination li a[ng-switch-when=next][disabled] {
+          background-color: #84CBCC; }
+        .pagination li a[ng-switch-when=prev]:before, .pagination li a[ng-switch-when=next]:before {
+          display: block;
+          font-family: FontAwesome;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 31px; }
+      .pagination li a[ng-switch-when=prev]:before {
+        content: '\f104'; }
+      .pagination li a[ng-switch-when=next]:before {
+        content: '\f105'; }
+    .pagination li.disabled {
+      display: none; }
+
+/* ------------------------------
+  Panel
+------------------------------ */
+.panel {
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+  .panel p:last-child {
+    margin-bottom: 0; }
+  .panel.panel-lg {
+    padding: 40px; }
+  .panel.panel-square {
+    border-radius: 0; }
+  .panel.panel-no-shadow {
+    border: 1px solid #EEEEEE;
+    box-shadow: none; }
+  .panel.bg-green .controls {
+    border-color: #FFFFFF; }
+  .panel + .panel {
+    margin-top: 30px; }
+  .panel .row:not(:last-child) {
+    margin-bottom: 20px; }
+  .panel .controls {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #EEEEEE; }
+    .panel .controls:before, .panel .controls:after {
+      content: "";
+      display: block;
+      overflow: hidden; }
+    .panel .controls:after {
+      clear: both; }
+  .panel .controls-link i {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+    font-size: 20px; }
+
+/* ------------------------------
+  Progress Nav
+------------------------------ */
+.progress-nav {
+  text-align: center; }
+  .progress-nav:before, .progress-nav:after {
+    content: "";
+    display: block;
+    overflow: hidden; }
+  .progress-nav:after {
+    clear: both; }
+  .progress-nav .task {
+    display: inline-block;
+    position: relative;
+    width: 175px;
+    height: 100px;
+    padding-top: 70px;
+    color: #EEEEEE;
+    font-size: 18px;
+    text-align: center; }
+    .progress-nav .task.complete {
+      color: #575757;
+      z-index: 1; }
+      .progress-nav .task.complete:before {
+        background-color: #ADDCDD; }
+      .progress-nav .task.complete:after {
+        background-color: #32A9AB;
+        border: solid 10px #ADDCDD; }
+    .progress-nav .task:before {
+      content: "";
+      position: absolute;
+      top: 27.5px;
+      left: -60px;
+      width: 120px;
+      height: 10px;
+      background-color: #E3F3F3; }
+    .progress-nav .task:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 55px;
+      width: 65px;
+      background-color: #FFFFFF;
+      border: solid 10px #E3F3F3;
+      border-radius: 50%;
+      color: #EEEEEE;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px;
+      text-align: center;
+      -webkit-transition: 0.2s linear all;
+      -moz-transition: 0.2s linear all;
+      -ms-transition: 0.2s linear all;
+      -o-transition: 0.2s linear all;
+      transition: 0.2s linear all; }
+    .progress-nav .task:first-child:before {
+      display: none; }
+    .progress-nav .task:nth-child(1):after {
+      content: "1"; }
+    .progress-nav .task:nth-child(2):after {
+      content: "2"; }
+    .progress-nav .task:nth-child(3):after {
+      content: "3"; }
+    .progress-nav .task:nth-child(4):after {
+      content: "4"; }
+    .progress-nav .task:nth-child(5):after {
+      content: "5"; }
+    .progress-nav .task:nth-child(6):after {
+      content: "6"; }
+    .progress-nav .task:nth-child(7):after {
+      content: "7"; }
+    .progress-nav .task:nth-child(8):after {
+      content: "8"; }
+    .progress-nav .task:nth-child(9):after {
+      content: "9"; }
+    .progress-nav .task:nth-child(10):after {
+      content: "10"; }
+
+/* ------------------------------
+  Toolbar
+------------------------------ */
+.toolbar, .row.toolbar {
+  margin-bottom: 40px !important; }
+  .toolbar .input-with-icon, .row.toolbar .input-with-icon {
+    display: inline-block;
+    width: 200px; }
+
+.toolbar-link-back i {
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+  font-size: 20px; }
+
+/* ------------------------------
+  Progressbar
+------------------------------ */
+[progress-bar] span.small {
+  display: none; }
+[progress-bar] .progress {
+  height: 15px;
+  border: solid 1px #EEEEEE;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
+  [progress-bar] .progress .progress-bar {
+    height: 100%;
+    background-color: #ACDB7D;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    font-size: 0; }
+
+/* ------------------------------
+  Footer
+------------------------------ */
+.footer-copyright {
+  width: 100%;
+  margin: 0;
+  padding: 18px 0 22px 0;
+  background-color: #E1F2FE;
+  text-align: center; }
+
+/* ------------------------------
+  Table
+------------------------------ */
+table {
+  width: 100%; }
+  table tbody {
+    border: solid 1px #EEEEEE; }
+    table tbody tr:hover {
+      background-color: #E3F3F3;
+      cursor: pointer; }
+    table tbody tr th {
+      background-color: #84CBCC;
+      color: #FFFFFF;
+      text-align: left; }
+    table tbody tr th, table tbody tr td {
+      padding: 10px;
+      border-right: solid 1px #EEEEEE;
+      border-bottom: solid 1px #EEEEEE;
+      font-weight: normal; }
+    table tbody tr td.table-with-buttons {
+      position: relative;
+      padding-right: 90px; }
+      table tbody tr td.table-with-buttons .buttons {
+        position: absolute;
+        top: 8px;
+        right: 10px; }
+
+.ng-table th.sortable {
+  background-color: #84CBCC;
+  color: #FFFFFF;
+  text-align: left; }
+  .ng-table th.sortable:hover {
+    cursor: pointer; }
+  .ng-table th.sortable.sort-desc, .ng-table th.sortable.sort-asc {
+    background-color: #84CBCC !important;
+    text-shadow: none !important; }
+    .ng-table th.sortable.sort-desc .sort-indicator:before, .ng-table th.sortable.sort-desc .sort-indicator:after, .ng-table th.sortable.sort-asc .sort-indicator:before, .ng-table th.sortable.sort-asc .sort-indicator:after {
+      margin-top: 10px !important; }
+  .ng-table th.sortable .sort-indicator:before, .ng-table th.sortable .sort-indicator:after {
+    position: static !important;
+    float: right;
+    opacity: 1 !important;
+    border-color: #FFFFFF transparent !important; }
+  .ng-table th.sortable .sort-indicator:before {
+    margin-top: 15px !important;
+    border-top-color: #FFFFFF; }
+  .ng-table th.sortable .sort-indicator:after {
+    margin-top: 5px !important;
+    margin-right: -8px;
+    border-bottom-color: #FFFFFF; }
+.ng-table th.sortable, .ng-table td {
+  padding: 10px;
+  border-right: solid 1px #EEEEEE;
+  border-bottom: solid 1px #EEEEEE;
+  font-weight: normal; }
+
+.ng-table-counts {
+  margin-top: 20px; }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  padding: 7px 10px;
+  max-width: 250px;
+  color: #fff; }
+
+.tooltip-show {
+  display: inherit; }
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0; }
+
+.tooltip-down .tooltip-arrow {
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #222; }
+
+.tooltip-up .tooltip-arrow {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #222; }
+
+.tooltip-right .tooltip-arrow {
+  left: -5px;
+  top: 50%;
+  margin-top: -3px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #222; }
+
+.tooltip-left .tooltip-arrow {
+  right: -5px;
+  top: 50%;
+  margin-top: -3px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #222; }
+
+/* Component Sass */
+/* ------------------------------
+  Tabs
+------------------------------ */
+.tabs-vertical {
+  margin-top: 30px; }
+  .tabs-vertical .tab {
+    position: relative;
+    width: 110%;
+    margin-bottom: 10px;
+    padding: 4px 20px 3px 20px;
+    background-color: #32A9AB;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    line-height: 35px; }
+    .tabs-vertical .tab.active, .tabs-vertical .tab.active:hover {
+      background-color: #ADDCDD; }
+      .tabs-vertical .tab.active:after, .tabs-vertical .tab.active:hover:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        right: 22px;
+        width: 5px;
+        height: 100%;
+        background-color: #ADDCDD; }
+    .tabs-vertical .tab:hover {
+      background-color: #84CBCC;
+      cursor: pointer; }
+
+.tabs-horizontal .tab-header:before, .tabs-horizontal .tab-header:after {
+  content: "";
+  display: block;
+  overflow: hidden; }
+.tabs-horizontal .tab-header:after {
+  clear: both; }
+.tabs-horizontal .tab-header [ng-tab-head], .tabs-horizontal .tab-header .tab {
+  position: relative;
+  float: left;
+  margin-right: 1px;
+  padding: 7px 8px;
+  background-color: #84CBCC;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px; }
+  .tabs-horizontal .tab-header [ng-tab-head] i.fa, .tabs-horizontal .tab-header .tab i.fa {
+    width: 16px;
+    border-radius: 50%;
+    line-height: 16px;
+    text-align: center; }
+    .tabs-horizontal .tab-header [ng-tab-head] i.fa.warning, .tabs-horizontal .tab-header .tab i.fa.warning {
+      background-color: #FFAB40; }
+    .tabs-horizontal .tab-header [ng-tab-head] i.fa.success, .tabs-horizontal .tab-header .tab i.fa.success {
+      background-color: #ACDB7D; }
+  .tabs-horizontal .tab-header [ng-tab-head].active, .tabs-horizontal .tab-header .tab.active {
+    background-color: #32A9AB; }
+    .tabs-horizontal .tab-header [ng-tab-head].active:after, .tabs-horizontal .tab-header .tab.active:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 1px;
+      background-color: #32A9AB; }
+.tabs-horizontal .tab-content {
+  position: relative;
+  padding: 10px;
+  background-color: #32A9AB;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+  .tabs-horizontal .tab-content [ng-tab-body] {
+    display: none;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+    .tabs-horizontal .tab-content [ng-tab-body].ng-show {
+      display: block; }
+
+/* Add Component Sass Above */

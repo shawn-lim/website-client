@@ -1,0 +1,27 @@
+/* ------------------------------
+  Toast
+------------------------------ */
+
+.toast {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  z-index: 99;
+  padding: 10px 20px;
+  border: solid 2px $success;
+  border-radius: 5px;
+  color: $success;
+	box-shadow: $box-shadow;
+  @extend .bg-success;
+  @include transform(-50%, 0);
+  &.warning{
+    border: solid 2px $warning;
+    color: $warning;
+    @extend .bg-warning;
+  }
+  &.error{
+    border: solid 2px $error;
+    color: $error;
+    @extend .bg-error;
+  }
+}

@@ -1,0 +1,67 @@
+/* ------------------------------
+  Variables - Color
+------------------------------ */
+
+/* ------ Project Theme ------ */
+
+// Project Colors
+$ugly-blue: #336F8C; 
+$sea      : #429F9B;
+
+// System Default Colors
+$white   : #fff;
+$black   : #252525;
+$success : #3bc374;
+$warning : #e6ca23;
+$error   : #dd4627;
+
+// Grayscale
+$gray-10 : #ededed;
+$gray-20 : #d1d1d1;
+$gray-30 : #a8a8a8;
+$gray-40 : #7a7a7a;
+$gray-50 : #414141;
+
+// Shadows
+$text-shadow       : 0 0 4px rgba(0, 0, 0, 0.35);
+$box-shadow        : 0 0 4px 0 rgba(0, 0, 0, 0.30);
+$inset-box-shadow  : inset 0 1px 2px 0 rgba(0,0,0,0.15);
+
+/* ------ Setting Colors ------ */
+
+// Main Colors
+$color-primary   : $ugly-blue;
+$color-secondary : $sea;
+ 
+// Main Color Shades
+$color-primary-l-30 : lighten($color-primary, 45%);
+$color-primary-l-20 : lighten($color-primary, 20%);
+$color-primary-l-10 : lighten($color-primary, 5%);
+$color-primary-d-10 : darken($color-primary, 5%);
+$color-primary-d-20 : darken($color-primary, 10%);
+$color-primary-d-30 : darken($color-primary, 20%);
+
+$color-secondary-l-30 : lighten($color-secondary, 45%);
+$color-secondary-l-20 : lighten($color-secondary, 20%);
+$color-secondary-l-10 : lighten($color-secondary, 5%);
+$color-secondary-d-10 : darken($color-secondary, 5%);
+$color-secondary-d-20 : darken($color-secondary, 10%);
+$color-secondary-d-30 : darken($color-secondary, 20%);
+
+// Background Colors
+$color-bg-body   : $gray-20;
+$color-bg-header : $color-primary;
+$color-bg-main   : $gray-10;
+$color-bg-footer : $gray-20;
+
+// Border Colors
+$color-border : $gray-20;
+
+// Text
+$color-text-body       : $gray-50;
+$color-text-heading-h1 : $gray-40;
+$color-text-heading-h2 : $color-secondary;
+$color-text-heading-h3 : $gray-40;
+$color-text-heading-h4 : $color-secondary;
+$color-link            : $color-primary;
+$color-link-hover      : $color-primary-l-10;
