@@ -6,5 +6,8 @@
 @import "stylesheets/framework";
 
 /* Component Sass */
-@import "directive/tabs";
+@import "directive/dialog/dialog";
+@import "directive/sidebar/sidebar";
+@import "directive/tabs/tabs";
+@import "directive/toast/toast";
 /* Add Component Sass Above */
