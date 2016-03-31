@@ -12,8 +12,11 @@ body {
 }
 
 main {
-  padding: ($spacing-x-large * 2 + $spacing-large) 0 $spacing-x-large;
+  padding: $spacing-large 0 $spacing-x-large;
   background-color: $color-bg-main;
+  @include laptop-and-up {
+    padding: ($spacing-x-large + $spacing-medium) 0 ($spacing-x-large * 4);
+  }
 }
 
 *,
@@ -30,21 +33,24 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  margin-bottom: $spacing-large;
+  margin-bottom: $spacing-small + $spacing-x-small;
   color: $color-text-heading-h1;
   font-size: $font-size-h1;
+  @include laptop-and-up {margin-bottom: $spacing-large;};
 }
 
 h2 {
-  margin-bottom: $spacing-medium;
+  margin-bottom: $spacing-small + $spacing-x-small;
   color: $color-text-heading-h2;
   font-size: $font-size-h2;
+  @include laptop-and-up {margin-bottom: $spacing-medium;};
 }
 
 h3 {
-  margin-bottom: $spacing-small + $spacing-x-small;
+  margin-bottom: $spacing-small;
   color: $color-text-heading-h3;
   font-size: $font-size-h3;
+  @include laptop-and-up {margin-bottom: $spacing-small + $spacing-x-small;};
 }
 
 h4 {
@@ -79,7 +85,7 @@ label {
 input[type="text"],
 input[type="password"],
 textarea {
-	min-width: 250px;
+	min-width: 220px;
 	height: 35px;
 	padding: $spacing-x-small ($spacing-small + $spacing-x-small);
 	background-color: $white;
@@ -92,6 +98,7 @@ textarea {
 	&[disabled] {
 		background-color: $gray-10;
 	}
+  @include laptop-and-up {min-width: 250px;};
 }
 
 input[type="radio"],
@@ -130,7 +137,7 @@ input[type="radio"] {
 		height: 14px;
 		border-radius: 50%;
 		box-shadow: 0 0 0 1px $gray-40;
-		border: $border-normal solid $white;
+		border: $border-default solid $white;
 		vertical-align: middle;
 	}
 }
@@ -192,7 +199,7 @@ th, td {
 
 th {
   background-color: $gray-10;
-  font-weight: normal;
+  font-weight: $font-weight-default;
   text-align: left;
   &:nth-child(2n) {
     background-color: $gray-20;
@@ -201,7 +208,7 @@ th {
 
 hr {
   border: solid $color-border;
-  border-width: $border-normal 0 0;
+  border-width: $border-default 0 0;
 }
 
 p {

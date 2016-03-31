@@ -113,6 +113,9 @@
 .float-right {
 	float: right !important;
 }
+.relative {
+	position: relative;
+}
 
 /* ----- Display and Visibility ----- */
 
@@ -141,6 +144,28 @@
 	overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* ----- Responsive Utilities ----- */
+
+.show-phone {
+	@include tablet-and-up {display: none};
+}
+.show-mobile {
+	@include laptop-and-up {display: none};
+}
+.show-tablet-only {
+	display: none;
+	@include tablet-and-up {display: block};
+	@include laptop-and-up {display: none};
+}
+.show-tablet-and-up {
+	display: none;
+	@include tablet-and-up {display: block};
+}
+.show-laptop-and-up {
+	display: none;
+	@include laptop-and-up {display: block};
 }
 
 /* ----- Others ----- */

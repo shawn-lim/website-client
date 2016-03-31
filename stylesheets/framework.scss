@@ -1,7 +1,7 @@
 /**
- * Istuarian CSS Framework
+ * Istuary UI Framework
  * @author: Elle Kasai
- * @version: 1.0.0, 2016-02-25
+ * @version: 1.1.0, 2016-03-30
  */
 
 // Setting
@@ -17,7 +17,7 @@
 // Angular Animations
 @import "angular/angular-animate";
 
-// Frame
+// Layout
 @import "layout/grid";
 @import "layout/container";
 @import "layout/section";
@@ -37,3 +37,12 @@
 @import "modules/tooltip";
 
 // Project
+@import "project/sg-variables";
+@import "project/sg-base";
+@import "project/sg-container";
+@import "project/sg-image";
+@import "project/sg-notes";
+@import "project/sg-side-nav";
+@import "project/sg-spacer";
+@import "project/sg-table";
+@import "project/sg-trigger-up";

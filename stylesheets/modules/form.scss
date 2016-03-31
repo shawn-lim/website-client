@@ -62,12 +62,20 @@
 }
 
 .input-with-button {
-	input, .horizontal {
-		display: inline-block;
-		vertical-align: middle;
-	}
-	input + .horizontal {margin-left: $spacing-x-small;}
-	input + .vertical {margin-top: $spacing-small + $spacing-x-small;}
+	%button-base {margin-bottom: 0;}
+	input, .horizontal  {display: inline-block;}
+	input + .horizontal {margin-top: $spacing-small;}
+	input + .vertical   {margin-top: $spacing-small;}
+	@include tablet-and-up {
+		input, .horizontal  {display: inline-block;}
+		input + .horizontal {
+			margin-top: 0;
+			margin-left: $spacing-x-small;
+		}
+	};
+	@include laptop-and-up {
+		input + .vertical   {margin-top: $spacing-small + $spacing-x-small;}
+	};
 }
 
 /* ----- Select ----- */

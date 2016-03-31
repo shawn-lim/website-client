@@ -6,6 +6,7 @@
 
 %button-base {
   display: inline-block;
+  max-width: 250px;
   margin-bottom: $spacing-small;
   padding: $spacing-small $spacing-medium;
   outline: none;
@@ -13,7 +14,11 @@
   border-radius: $radius-default;
   font-size: $font-size-button;
   text-align: center;
-  @include tablet-and-up {margin-right: $spacing-x-small;};
+  @include tablet-and-up {
+    max-width: none;
+    margin-right: $spacing-x-small;
+    &:last-child {margin-right: 0;}
+  };
 
   // State
   &:hover, &:focus {
@@ -33,7 +38,6 @@
 
   // Icon Only
   &.icon-only {
-    @extend .icon-button;
     width: 40px;
     height: 40px;
     padding: $spacing-small;

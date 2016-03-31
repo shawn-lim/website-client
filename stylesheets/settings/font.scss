@@ -2,8 +2,31 @@
   Font
 ------------------------------ */
 
-// DIN Condensed Bold
+// Rajdhani
 @font-face {
-  font-family: 'DINCondensed';
-  src: url(/fonts/DINCondensed-Bold.ttf) format('ttf');
+  font-family: 'Rajdhani';
+  src: url(/fonts/Rajdhani-Regular.otf) format('otf'),
+  url(/fonts/Rajdhani-Regular.ttf) format('ttf'),
+  url(/fonts/Rajdhani-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url(/fonts/Rajdhani-Semibold.otf) format('otf'),
+  url(/fonts/Rajdhani-Semibold.ttf) format('ttf'),
+  url(/fonts/Rajdhani-Semibold.woff) format('woff');
+  font-weight: bold;
+}
+
+// Microsoft YaHei
+@font-face{
+	font-family:"Microsoft YaHei";
+  src: url(/fonts/Microsoft-YaHei.otf) format('ttf'),
+  url(/fonts/Microsoft-YaHei.woff) format('woff');
+}
+
+@font-face{
+	font-family:"Microsoft YaHei";
+  src: url(/fonts/Microsoft-YaHei-bold.otf) format('ttf'),
+  url(/fonts/Microsoft-YaHei-bold.woff) format('woff');
+  font-weight: bold;
 }

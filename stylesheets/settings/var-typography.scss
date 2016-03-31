@@ -5,18 +5,16 @@
 /* ------ Project Theme ------ */
 
 // Font Family
-$font-family-primary   : 'DINCondensed', sans-serif;
-$font-family-secondary : 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-$font-family-chinese   : 'Microsoft YaHei','微软雅黑', STXihei, '华文细黑', sans-serif;
+$font-family-primary   : 'Rajdhani', 'Microsoft YaHei','微软雅黑', STXihei, '华文细黑', Arial, sans-serif;
+$font-family-secondary : 'Helvetica Neue', Helvetica, 'Microsoft YaHei','微软雅黑', STXihei, '华文细黑', Arial, sans-serif;
 
 // Font Weight
-$font-weight-bold   : 700;
-$font-weight-normal : 400;
-$font-weight-light  : 300;
+$font-weight-bold    : 700;
+$font-weight-default : 400;
+$font-weight-light   : 300;
 
 // Font Sizes
-$font-size-xx-large : 32px;
+$font-size-xx-large : 28px;
 $font-size-x-large  : 24px;
 $font-size-large    : 18px;
 $font-size-medium   : 16px;
@@ -36,7 +34,7 @@ $font-family-heading : $font-family-secondary;
 $font-family-body    : $font-family-secondary;
 
 // Font Weight for Heading
-$font-weight-heading : $font-weight-normal;
+$font-weight-heading : $font-weight-default;
 
 // Font Sizes
 $font-size-h1     : $font-size-xx-large;
@@ -45,8 +43,7 @@ $font-size-h3     : $font-size-large;
 $font-size-h4     : $font-size-medium;
 $font-size-button : $font-size-medium;
 $font-size-body   : $font-size-default;
-$font-size-small  : $font-size-small;
 
 // Line Height
-$line-height-heading : $line-height-wide;
-$line-height-body    : $line-height-narrow;
+$line-height-heading : $line-height-narrow;
+$line-height-body    : $line-height-default;

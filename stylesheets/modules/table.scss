@@ -4,22 +4,32 @@
 
 /* ----- Table Title ----- */
 
-.table-title {@include clearfix;}
+.table-title {
+  margin-bottom: $spacing-small + $spacing-x-small;
+  @include clearfix;
+  @include laptop-and-up {margin-bottom: 0;};
+}
 .table-title-left  {float: left;}
 .table-title-right {float: right;}
 
 /* ----- Table Toolbar ----- */
 
 .table-toolbar {@include clearfix;}
-.table-toolbar-left {float: left;}
-.table-toolbar-right {float: right;}
+.table-toolbar-left {
+  float: left;
+  margin-bottom: $spacing-medium;
+}
+.table-toolbar-right {
+  float: left;
+  @include laptop-and-up {float: right;};
+}
 
 .table-toolbar-input {
   display: inline-block;
+  margin-bottom: $spacing-small + $spacing-x-small;
   vertical-align: middle;
-  + .table-toolbar-input,
-  + .table-toolbar-select {
-    margin-left: $spacing-small;
+  + .table-toolbar-input {
+    margin-left: $spacing-small + $spacing-x-small + 3px;
   }
   label,
   .input-icon-left,
@@ -38,6 +48,13 @@
   	&-left  {i {left: $spacing-small;}}
   	&-right {i {right: $spacing-small;}}
   }
+  @include tablet-and-up {
+    margin-bottom: 0;
+    + .table-toolbar-input,
+    + .table-toolbar-select {
+      margin-left: $spacing-small;
+    }
+  };
 }
 
 .table-toolbar-select {
@@ -66,6 +83,7 @@
   margin-top: $spacing-medium;
   border: $border-thin solid $gray-20;
   border-radius: $radius-default;
+  overflow-x: scroll;
 }
 
 /* ----- Table Head ----- */
