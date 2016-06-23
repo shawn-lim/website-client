@@ -4,9 +4,5 @@ bower_components/
 *.log
 
 build/
-<<<<<<< HEAD
-=======
-dist/
->>>>>>> 5c315b049fee0cb5e85f016d61a300be11716954
 
 # Created by .ignore support plugin (hsz.mobi)
