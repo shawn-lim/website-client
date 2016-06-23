@@ -13,6 +13,14 @@ module.exports = {
 				var rules = [
 					'!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.woff|\\.ttf\\.gif$ /index.html'
 				];
+        middlewares.unshift(function(req,res,next){
+          if(req.originalUrl.indexOf('/client_version') === 0){
+            res.end(pjson.version);
+          }
+          else {
+            return next();
+          }
+        });
 				middlewares.unshift(rewrite(rules));
 				return middlewares;
 			}

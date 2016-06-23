@@ -10,6 +10,10 @@ angular.module('angularClient').config(function ($urlRouterProvider, $urlMatcher
 
 	// use the HTML5 History API
 	$locationProvider.html5Mode(true);
+  // If you use ngTokenAuth, use the code below, or implement your own. Remember to set the APILOCATION somewhere like the app.js file.
+  //$authProvider.configure({
+    //apiUrl: 'http://'+APILOCATION.host+ (APILOCATION.port === '80' ? '' : ':'+APILOCATION.port)
+  //});
 });
 
 angular.module('angularClient').config(function($stateProvider) {
