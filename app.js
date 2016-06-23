@@ -3,8 +3,9 @@
 angular.module('angularClient', ['angular.filter', 'ngAnimate','ui.router','ngOrderObjectBy','duScroll', 'ng-token-auth', 'tabs', 'textAngular', '720kb.tooltips','ui.utils','ngAnimate', 'ngTable']);
 
 angular.module('angularClient').run(function($rootScope, $http, $state) {
-
-  $rootScope.System.version = 'Loading...';
+  $rootScope.System = { 
+    version: 'Loading...'
+  };
 
   $http.get('/client_version').success(function(res){
     $rootScope.System.version = res;
@@ -12,8 +13,8 @@ angular.module('angularClient').run(function($rootScope, $http, $state) {
 
   // Loading for uistate
   $rootScope.state_loading = false;
- 
- // This sets the UI to state loading you can use for loading screens
+
+  // This sets the UI to state loading you can use for loading screens
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
     $rootScope.state_loading = true;
     // This checks the client version against the server version.
@@ -46,15 +47,15 @@ angular.module('angularClient').run(function($rootScope, $http, $state) {
     $state.go('overview');
     $rootScope.state_loading = false;
   });
-    $rootScope.safeApply = function(fn) {
-        var phase = $rootScope.$$phase;
-        if (phase === '$apply' || phase === '$digest') {
-            if (fn && (typeof(fn) === 'function')) {
-                fn();
-            }
-        } else {
-            this.$apply(fn);
-        }
-    };
+  $rootScope.safeApply = function(fn) {
+    var phase = $rootScope.$$phase;
+    if (phase === '$apply' || phase === '$digest') {
+      if (fn && (typeof(fn) === 'function')) {
+        fn();
+      }
+    } else {
+      this.$apply(fn);
+    }
+  };
 
 });

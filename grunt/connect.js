@@ -2,6 +2,7 @@
 
 var gbUtils = require('../gb-utils-required.js');
 var rewrite = require('connect-modrewrite');
+var pjson = require('../package.json');
 
 module.exports = {
   main: {
