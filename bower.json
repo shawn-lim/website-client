@@ -28,16 +28,17 @@
     "moment": "~2.8",
     "underscore": "~1.7",
     "highcharts": "highcharts-release#~4.2.3",
-    "ng-table": "~0.8.3"
+    "ng-table": "~0.8.3",
+    "angular-messages": "^1.6.1"
   },
   "resolutions": {
     "angular": "1.5.0"
   },
-	"overrides": {
-		"font-awesome": {
-			"main": [
-				"css/font-awesome.css"
-			]
-		}
-	}
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
+  }
 }
