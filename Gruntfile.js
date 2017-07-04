@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         files.push(filepath);
 
         grunt.config('karma.options.files', files);
-        tasksToRun.push('karma:during_watch');
+        //tasksToRun.push('karma:during_watch');
       }
     }
 
@@ -78,7 +78,7 @@ module.exports = function (grunt) {
 
         files.push(spec);
         grunt.config('karma.options.files', files);
-        tasksToRun.push('karma:during_watch');
+        //tasksToRun.push('karma:during_watch');
       }
     }
 

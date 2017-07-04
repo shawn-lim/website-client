@@ -1,6 +1,6 @@
 (function () { 'use strict';}());
 
-angular.module('angularClient', ['angular.filter', 'ngAnimate','ui.router','ngOrderObjectBy','duScroll', 'ng-token-auth', 'tabs', 'textAngular', '720kb.tooltips','ui.utils','ngAnimate', 'ngTable']);
+angular.module('angularClient', ['angular.filter', 'ngAnimate','ui.router','ngOrderObjectBy','duScroll', 'ng-token-auth', 'textAngular', '720kb.tooltips','ui.utils','ngAnimate', 'ngTable']);
 
 angular.module('angularClient').run(function($rootScope, $http, $state) {
   $rootScope.System = { 

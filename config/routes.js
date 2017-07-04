@@ -17,6 +17,10 @@ angular.module('angularClient').config(function ($urlRouterProvider, $urlMatcher
 });
 
 angular.module('angularClient').config(function($stateProvider) {
+  $stateProvider.state('main', {
+      url: '/',
+      templateUrl: 'partial/main/main.html'
+    });
   /* Add New States Above */
 });
 

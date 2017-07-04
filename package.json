@@ -1,11 +1,10 @@
 {
   "name": "angularClient",
   "version": "0.1.0",
-  "author": "Shawn Lim <shawn.lim@hotmail.ca>",
+  "author": "Shawn Lim <shawn_lim@outlook.com>",
   "contributors": [
     {
-      "name": "Elle Kasai (CSS)",
-      "email": "elle.kasai@istuary.com"
+      "name": "Elle Kasai (CSS)"
     }
   ],
   "devDependencies": {
